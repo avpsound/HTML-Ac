@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Приветствие</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .card {
+    text-align: center;
+    padding: 2.5rem 3rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    color: #222;
+  }
+  p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Привет!</h1>
+    <p id="date"></p>
+  </div>
+  <script>
+    const formatter = new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+    document.getElementById('date').textContent = 'Сегодня ' + formatter.format(new Date()) + ' года.';
+  </script>
+</body>
+</html>
