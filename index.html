@@ -26,6 +26,13 @@
     font-size: 2rem;
     color: #222;
   }
+  .video {
+    margin-top: 1.5rem;
+    width: min(560px, 80vw);
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+  }
   p {
     margin: 0;
     font-size: 1.1rem;
@@ -37,6 +44,9 @@
   <div class="card">
     <h1>Привет!</h1>
     <p id="date"></p>
+    <iframe class="video" src="https://www.youtube.com/embed/zA9qpKHPuBQ"
+      title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
   </div>
   <script>
     const formatter = new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
